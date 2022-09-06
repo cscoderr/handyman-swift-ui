@@ -23,12 +23,12 @@ struct OnboardView: View {
             
             Text(data.description)
                 .foregroundColor(.gray)
+                .multilineTextAlignment(.leading)
                 .font(.body)
             Spacer()
             
 //            IndicatorView()
-        }.padding(.horizontal, 20)
-            .padding(.vertical, 20)
+        }
     }
 }
 

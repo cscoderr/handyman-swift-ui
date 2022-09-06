@@ -40,9 +40,14 @@ struct IndicatorView: View {
 
             }
             Spacer()
-            Text("Next")
-                .foregroundColor(.purple)
-                .font(.headline)
+            Button {
+                print("Next")
+            } label: {
+                Text("Next")
+                    .foregroundColor(.purple)
+                    .font(.headline)
+            }
+
             
         }
     }

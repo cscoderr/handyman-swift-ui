@@ -8,25 +8,54 @@
 import SwiftUI
 
 struct SplashView: View {
-    @State private var isActive = true
+    @State private var currentStep = 0
+    
     
     var body: some View {
-        TabView {
-            OnboardView(
-                data: Onboarding(title: "Welcome to Hanyman Service", imageName: "walkthrough_1", description: "Handyma Service - On-Demand Home Services App with Complete Solution")
-            )
-            OnboardView(
-                data: Onboarding(title: "Welcome to Hanyman Service", imageName: "walkthrough_1", description: "Handyma Service - On-Demand Home Services App with Complete Solution")
-            )
-            OnboardView(
-                data: Onboarding(title: "Welcome to Hanyman Service", imageName: "walkthrough_1", description: "Handyma Service - On-Demand Home Services App with Complete Solution")
-            )
-            OnboardView(
-                data: Onboarding(title: "Welcome to Hanyman Service", imageName: "walkthrough_1", description: "Handyma Service - On-Demand Home Services App with Complete Solution")
-            )
-        }
-        .tabViewStyle(.page(indexDisplayMode: .always))
-        .indexViewStyle(.page(backgroundDisplayMode: .always))
+        VStack {
+            
+            TabView(selection: $currentStep) {
+                
+                ForEach(0..<Constants().onboardings.count) { it in
+                    OnboardView(data: Constants().onboardings[it])
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            
+            
+
+            
+            HStack{
+                HStack {
+                    ForEach(0..<Constants().onboardings.count) { it in
+                        
+                        if(it == self.currentStep) {
+                           Rectangle()
+                                .frame(width: 30, height: 10)
+                                .cornerRadius(10)
+                                .foregroundColor(.purple)
+                        }
+                        else {
+                            Circle()
+                                .frame(width: 10, height: 10)
+                                .foregroundColor(.gray)
+                        }
+                    }
+                }
+                Spacer()
+                Button {
+                    print("Next")
+                } label: {
+                    Text(self.currentStep < Constants().onboardings.count - 1 ? "Next" : "Get Started")
+                        .foregroundColor(.purple)
+                        .font(.headline)
+                }
+
+                
+            }
+        } .padding(.horizontal, 20)
+            .padding(.vertical, 20)
+        
     }
 }
 

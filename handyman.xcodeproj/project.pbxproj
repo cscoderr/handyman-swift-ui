@@ -17,6 +17,7 @@
 		33A20A8D28C6F631008A4908 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A20A8C28C6F631008A4908 /* OnboardView.swift */; };
 		33A20A8F28C6F67D008A4908 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A20A8E28C6F67D008A4908 /* IndicatorView.swift */; };
 		33A20A9228C6FACF008A4908 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A20A9128C6FACF008A4908 /* Onboarding.swift */; };
+		33A20A9628C6FD9A008A4908 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A20A9528C6FD9A008A4908 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		33A20A8C28C6F631008A4908 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 		33A20A8E28C6F67D008A4908 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		33A20A9128C6FACF008A4908 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		33A20A9528C6FD9A008A4908 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		33A20A7228C6DCB2008A4908 /* handyman */ = {
 			isa = PBXGroup;
 			children = (
+				33A20A9428C6FD90008A4908 /* Utils */,
 				33A20A9328C6FB29008A4908 /* Controller */,
 				33A20A9028C6FAC1008A4908 /* Model */,
 				33A20A8228C6DDB2008A4908 /* App */,
@@ -139,6 +142,14 @@
 			children = (
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		33A20A9428C6FD90008A4908 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				33A20A9528C6FD9A008A4908 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 				33A20A8D28C6F631008A4908 /* OnboardView.swift in Sources */,
 				33A20A9228C6FACF008A4908 /* Onboarding.swift in Sources */,
 				33A20A7428C6DCB2008A4908 /* handymanApp.swift in Sources */,
+				33A20A9628C6FD9A008A4908 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
