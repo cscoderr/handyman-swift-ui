@@ -1,4 +1,4 @@
-# handyman-swift-ui
+# Handyman Swift UI
 
 ## Screenshots
 
