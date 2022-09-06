@@ -44,13 +44,26 @@ struct SplashView: View {
                         }
                     }
                     Spacer()
-                    NavigationLink {
-                        LoginView()
-                    } label: {
-                        Text(self.currentStep < Constants().onboardings.count - 1 ? "Next" : "Get Started")
-                            .foregroundColor(.purple)
-                            .font(.headline)
+                    
+                    if(self.currentStep == Constants().onboardings.count - 1) {
+                        NavigationLink {
+                            LoginView()
+                        } label: {
+                            Text("Get Started")
+                                .foregroundColor(.purple)
+                                .font(.headline)
+                        }
+                    } else {
+                        Button {
+                            self.currentStep += 1
+                        } label: {
+                            Text("Next")
+                                .foregroundColor(.purple)
+                                .font(.headline)
+
+                        }
                     }
+                    
 
                     
                 }
